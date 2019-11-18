@@ -1,0 +1,289 @@
+block_size: 30
+customer: "CustomerName"
+amendments_term_id: 1
+date_of_transfer_term_id: 250
+date_of_release_term_id: 178
+MAX_IDLE_TIME_SECONDS: 900
+MAX_IDLE_DAYS: 30
+INTAKE_FOLDER: "raw_files"
+customer_view:
+  show_exec_summary: true
+  show_key_terms: true
+  show_contract: true
+  show_non_standard: true
+  show_amendments: true
+  show_family_view: true
+  show_notes: true
+contract_number:
+contract_request:
+  show_optional_terms: false
+htmldoc_program_path: "/usr/bin/htmldoc"  
+company_group: "Customer Name"
+base_url: "https://CustomerName.pramata.com/"
+welcome_msg_text: "CustomerName"
+enable_alert: false
+enable_news_feed: false
+enable_approval: false
+support_email_address: "support@pramata.com"
+support_email_prefix: "Pramata Support"
+show_contract_number_help_text: "This will search across CTL Contract Number,Customer Contract Number and Pramata Number"
+email_config:
+  enable_outgoing_email: true
+  test_mail_recipient: "tech_test@pramata.com"
+  default_email_address: "tech_test@pramata.com"
+  enable_incoming_email: false
+intake_process: "auto"
+set_salesforce_source: true
+user_management_rules:
+  password_length: 6
+  retry_count: 3
+  reuse_old_password_count: 3
+  enable_account_lockout: false
+  max_password_age: 0
+  password_history: false
+  max_inactive_time: 90
+transaction_label: "Contract Package"
+request_preview_link: "Pdf"
+transaction_link_term_type: "Associate Document"
+enable_transaction: false
+sla_config:
+  duration: 5
+  frequency: "weekly"
+dashboard_filter : company_group_id
+salesforce_auth_type: SAML
+dynamic_sf_user_creation: true
+sf_saml_user_role_name: "SalesforceSAMLUser"
+salesforce_namespace: ""
+enable_snapshot_details: false
+allow_pramata_access: false
+accepted_formats:
+  Adobe: pdf
+  Text: txt,text,rtf
+  Hypertext: html,htm
+  Image: jpg,jpeg,tif,tiff
+  Archive: zip
+  Word: doc,docx
+salesforce_accepted_formats:
+  online_converted_formats:
+    Adobe: pdf
+    Text: txt,text
+    Image: jpg,jpeg,tif,tiff
+    Hypertext: html,htm
+  offline_converted_formats:
+    Word: doc,docx
+notification_email_config:
+ Salesforce:
+  Pricing path:
+   - Standard
+   - Field Discretion
+   - EZ Amendment to POM
+   - All Other EZ Pricing
+   - POM
+ Pramata:
+  Comment:
+   - comment1
+   - comment2
+ Docusign Direct:
+  Envelope recipient:
+   - Envelop1
+   - Envelop2
+  Envelope CC recipient: 
+   - BPG.Contracts@centurylink.com
+   - ezapprov@centurylink.com
+   - csalescontracts3@centurylink.com
+  Custom field NSP:
+   - Yes
+   - No
+ Docusign SF:
+  Envelope recipient:
+   - Envelop1
+   - Envelop2
+  Envelope CC recipient:
+   - BPG.Contracts@centurylink.com
+   - ezapprov@centurylink.com
+   - csalescontracts3@centurylink.com
+  Custom field NSP:
+   - Yes
+   - No
+ ApiIntake-Docusign:
+  Envelope recipient:
+   - Envelop1
+   - Envelop2
+  Envelope CC recipient:
+   - BPG.Contracts@centurylink.com
+   - ezapprov@centurylink.com
+   - csalescontracts3@centurylink.com
+  Custom field NSP:
+   - Yes
+   - No
+ ApiIntake-DocusignDirect:
+  Envelope recipient:
+   - Envelop1
+   - Envelop2
+  Envelope CC recipient:
+   - BPG.Contracts@centurylink.com
+   - ezapprov@centurylink.com
+   - csalescontracts3@centurylink.com
+  Custom field NSP:
+   - Yes
+   - No
+ Exception:
+ SFTP:
+ SplitFile:
+alert_config:
+  customer: all
+piwik_analytics:
+  development:
+    url: "analytics-stage.pramata.com"
+    site_id: 
+  stage:
+    url: "analytics-stage.pramata.com"
+    site_id: 
+  production:
+    url: "analytics.pramata.com"
+    site_id: 1
+  demo:
+    url: "analytics-stage.pramata.com"
+    site_id: 2
+  e2e:
+    url: "analytics-stage.pramata.com"
+    site_id: 3
+  dev:
+    url: "analytics-stage.pramata.com"
+    site_id:
+
+graylog_logger:
+  development:
+    url: "dev-logs.pramata.com"
+    port: 12201
+    base_url: "https://CustomerName-test2.pramata.com"
+  stage:
+    url: "dev-logs.pramata.com"
+    port: 12201
+    base_url: "https://CustomerName-stage.pramata.com"
+  dev:
+    url: "dev-logs.pramata.com"
+    port: 12201
+    base_url: "https://CustomerName-dev2.pramata.com"
+  uat:
+    url: "dev-logs.pramata.com"
+    port: 12201
+    base_url: "http://cp-CustomerName-uat.pramata.com"
+  demo:
+    url: "dev-logs.pramata.com"
+    port: 12201
+    base_url: "https://CustomerName-uat.pramata.com"
+  production:
+    url: "glogs.pramata.com"
+    port: 12201
+    base_url: "https://CustomerName.pramata.com"
+
+salesforce_help_link: "http://www.brainshark.com/centurylinkinc/vu?pi=zHOzSuhLIz5f7jz0&intk=438681625"
+redis:
+  is_enabled: true
+  password: "Redd1s1i5#gCXXRE7JXreA6rjG9fNLJ47JhWH2zAQSAtc3wGuEtKTTma9sVwYmJYNu2Umt,LfrWF"
+  port: 6379
+  default_expiration: 28800
+default_reporting_columns:
+  :metadata:
+  - pontus_number
+  - company_group_id
+  - display_name
+  - contract_type_id
+  - effective_date
+  :keyterm:
+  - 70
+api_basic_auth:
+  prod:
+    username: "apiuser"
+    password: "gD#<9R+Br_w<"
+  dev:
+    username: "apiuser"
+    password: "X;n%XSM,5gX$"
+  uat:
+    username: "apiuser"
+    password: "gD#<9r+Br$w<"
+  demo:
+    username: "apiuser"
+    password: "$Chyj_6.a13u"
+  stage:
+    username: "apiuser"
+    password: "gD#<9R+Br5w<"
+
+navigator_piwik_analytics:
+  development:
+    url: "analytics-stage.pramata.com"
+    site_id:
+  stage:
+    url: "analytics-stage.pramata.com"
+    site_id:
+  production:
+    url: "analytics.pramata.com"
+    site_id: 20
+  demo:
+    url: "analytics-stage.pramata.com"
+    site_id: 18
+  e2e:
+    url: "analytics-stage.pramata.com"
+    site_id:
+  dev:
+    url: "analytics-stage.pramata.com"
+    site_id: 12
+
+beta_users_list:
+  usernames: pramatasupport,jchow,jchow-commercial,kaminskk@centurylink.com,CTLPramataSupport,LGRAHAM,JEJONE2,jodimullins,test
+delivery_platform_piwik_analytics:
+  production:
+    site_id: 32
+    piwik_url: "analytics.pramata.com"
+  demo:
+    site_id:
+    piwik_url: "analytics-stage.pramata.com"
+  stage:
+    site_id:
+    piwik_url: "analytics-stage.pramata.com"
+  uat:
+    site_id:
+    piwik_url: "analytics-stage.pramata.com"
+  e2e:
+    site_id:
+    piwik_url: "analytics-stage.pramata.com"
+  dev:
+    site_id:
+    piwik_url: "analytics-stage.pramata.com"
+  development:
+    site_id:
+    piwik_url: "analytics-stage.pramata.com"
+
+
+digital_snapshot_config:
+  production:
+    dp_core_service_access_token: "e259ef9d763418ed0994c94fa2c3f2c0cce7f7074256370362953046d950ee08"
+  stage:
+    dp_core_service_access_token: "98c8ae5163258c1b2d1375fdc52e2dae2439abaa01c09cddad062a64b7a74386"
+  dev:
+    dp_core_service_access_token: ""
+  demo:
+    dp_core_service_access_token: ""
+  uat:
+    dp_core_service_access_token: "52f224f0d713f80b9ec26d434d89872b12e199914548138b835949c97f3c06ec"
+  development:
+    dp_core_service_access_token: ""
+
+data_map:
+  development:
+    username: datamap
+    password: 9UsTaEPwPMVwcfsJ
+    data_map_url: http://localhost:5000/configs/index
+  stage:
+    username: datamap
+    password: FGAPtc3VN3mhZQbF
+    data_map_url: https://CustomerName-stage-internal.pramata.com/datamap/configs/index
+  production:
+    username: datamap
+    password: teGMYsjxFUh9Hfyw
+    data_map_url: https://CustomerName-internal.pramata.com/datamap/configs/index
+  uat:
+    username: datamap
+    password: teGMYsjxFUh9Hfyw
+    data_map_url: https://CustomerName-uat-internal.pramata.com/datamap/configs/index
